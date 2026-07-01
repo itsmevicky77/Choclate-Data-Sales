@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Models
+Random_Forest_Model.pkl
+models/
+*.pkl
+
+# OS
+.DS_Store

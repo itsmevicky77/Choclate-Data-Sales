@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Chocolate Sales Prediction</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🍫 Chocolate Sales Prediction</h1>
+
+            <p class="subtitle">
+                AI Powered Revenue Forecasting
+            </p>
+
+            <form action="/predict" method="post">
+
+                <div class="grid">
+
+                    <div>
+
+                        <label>Product</label>
+
+                        <select name="Product">
+
+                            <option>70% Dark Bar</option>
+                            <option>85% Dark Bar</option>
+                            <option>Almond Crunch Bar</option>
+                            <option>Choco Coins Bag</option>
+                            <option>Hazelnut Milk Bar</option>
+                            <option>Milk Classic Bar</option>
+                            <option>Mint Dark Bar</option>
+                            <option>Mixed Assortment Box</option>
+                            <option>Pralines Gift Box</option>
+                            <option>Salted Caramel Bar</option>
+                            <option>Truffle Gift Box</option>
+                            <option>White Choco Bar</option>
+
+                        </select>
+
+                    </div>
+
+                    <div>
+
+                        <label>Country</label>
+
+                        <select name="Country">
+
+                            <option>Australia</option>
+                            <option>Brazil</option>
+                            <option>Germany</option>
+                            <option>India</option>
+                            <option>Japan</option>
+
+                        </select>
+
+                    </div>
+
+                    <div>
+
+                        <label>Channel</label>
+
+                        <select name="Channel">
+
+                            <option>Retail</option>
+                            <option>Wholesale</option>
+                            <option>Online</option>
+
+                        </select>
+
+                    </div>
+
+                    <div>
+
+                        <label>Month</label>
+
+                        <input type="number" name="Month" min="1" max="12" value="7">
+
+                    </div>
+
+                    <div>
+
+                        <label>Quarter</label>
+
+                        <input type="number" name="Quarter" min="1" max="4" value="3">
+
+                    </div>
+
+                    <div>
+
+                        <label>Discount %</label>
+
+                        <input type="number" step="0.1" name="Discount_Pct" value="10">
+
+                    </div>
+
+                    <div>
+
+                        <label>Boxes Shipped</label>
+
+                        <input type="number" name="Boxes_Shipped" value="150">
+
+                    </div>
+
+                    <div>
+
+                        <label>Price Per Box</label>
+
+                        <input type="number" step="0.01" name="Price_per_Box" value="3.75">
+
+                    </div>
+
+                    <div class="full">
+
+                        <label>Marketing Spend</label>
+
+                        <input type="number" step="0.01" name="Marketing_Spend" value="120">
+
+                    </div>
+
+                </div>
+
+                <button type="submit">
+
+                    🚀 Predict Sales
+
+                </button>
+
+            </form>
+
+            {% if prediction %}
+
+            <div class="result">
+
+                <h2>💰 Predicted Chocolate Sales</h2>
+
+                <h1>${{prediction}}</h1>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
